@@ -13,6 +13,10 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\Vulcanova.Uonet\Vulcanova.Uonet\Vulcanova.Uonet.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
