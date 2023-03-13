@@ -14,7 +14,7 @@ public class RegistrationController : Controller
             new RegisterClientResponse
             {
                 LoginId = 1234,
-                RestURL = "https://localhost:8080/febe/",
+                RestURL = $"https://{Request.Host}/febe/",
                 UserLogin = "jan.kowalski@example.com",
                 UserName = "jan.kowalski@example.com"
             }, "AccountPayload");
@@ -176,7 +176,7 @@ public class RegistrationController : Controller
                         Id = 1,
                         Name = "V Liceum Ogólnokształcące",
                         Patron = "Aplikacja Vulcanova",
-                        RestUrl = new Uri("https://localhost:8080/febe/"),
+                        RestUrl = new Uri($"https://{Request.Host}/febe/"),
                         SchoolTopic = Guid.NewGuid(),
                         Short = "05LO",
                         Symbol = "05LO"
