@@ -5,7 +5,7 @@ using Vulcanova.Uonet.Api.Auth;
 namespace Vulcanova.Febe.Controllers;
 
 [Route("febe/api/mobile/register")]
-public class RegistrationController
+public class RegistrationController : Controller
 {
     [HttpPost("new")]
     public ApiResponse<RegisterClientResponse> RegisterClient()
