@@ -21,27 +21,14 @@ public class ExamController : Controller
             new ExamPayload
             {
                 Content = "Pętle w COBOLu",
-                Creator = new Teacher
-                {
-                    DisplayName = "Tomasz Problem",
-                    Id = 1,
-                    Name = "Tomasz",
-                    Surname = "Problem"
-                },
+                Creator = Data.Teachers.Tutor,
                 DateCreated = DateTimeInfo.FromDateTime(new DateTime(2021, 9, 3)),
                 DateModify = DateTimeInfo.FromDateTime(new DateTime(2021, 9, 3)),
                 Deadline = DateTimeInfo.FromDateTime(new DateTime(2021, 10, 3)),
                 Id = 1,
                 Key = "c28e65d7-92fa-43eb-9b11-da3ba3333eb7",
                 PupilId = 1,
-                Subject = new Subject
-                {
-                    Id = 1,
-                    Key = Guid.Parse("fb0ea14e-1570-49fc-aa2c-a470fe6a8fff"),
-                    Kod = "informatyka",
-                    Name = "Informatyka",
-                    Position = 1
-                },
+                Subject = Data.Subjects.It,
                 Type = "Sprawdzian"
             }
         }, ApiResponseFactory.EnvelopeTypeIEnumerable);
