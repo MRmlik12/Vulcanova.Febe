@@ -56,4 +56,63 @@ public class GradeController
             }
         }, ApiResponseFactory.EnvelopeTypeIEnumerable);
     }
+
+    [HttpGet("average/byPupil")]
+    public ApiResponse<AverageGradePayload[]> GetAverageGradesByPupil(
+        [FromQuery] int unitId,
+        [FromQuery] int pupilId,
+        [FromQuery] int periodId,
+        [FromQuery] int pageSize,
+        [FromQuery] int lastId = int.MinValue)
+    {
+        return ApiResponseFactory.Ok(new []
+        {
+            new AverageGradePayload
+            {
+                Id = 1,
+                PeriodId = 1,
+                PupilId = 1,
+                Subject = Data.Subjects.Literature,
+                Average = "6",
+                Points = null
+            }
+        }, ApiResponseFactory.EnvelopeTypeIEnumerable);
+    }
+
+    [HttpGet("behaviour/byPupil")]
+    public ApiResponse<GradePayload[]> GetBehaviourGradeByPupil(
+        [FromQuery] int unitId,
+        [FromQuery] int pupilId,
+        [FromQuery] int periodId,
+        [FromQuery] DateTime lastSyncDate,
+        [FromQuery] int pageSize,
+        [FromQuery] int lastId = int.MinValue)
+    {
+        return ApiResponseFactory.Ok(Array.Empty<GradePayload>(),
+            ApiResponseFactory.EnvelopeTypeIEnumerable);
+    }
+
+    [HttpGet("summary/byPupil")]
+    public ApiResponse<GradesSummaryEntryPayload[]> GetGradesSummaryByPupil(
+        [FromQuery] int unitId,
+        [FromQuery] int pupilId,
+        [FromQuery] int periodId,
+        [FromQuery] int pageSize,
+        [FromQuery] int lastId = int.MinValue)
+    {
+        return ApiResponseFactory.Ok(new[]
+        {
+            new GradesSummaryEntryPayload
+            {
+                DateModify = DateTimeInfo.FromDateTime(new DateTime(2021, 9, 7)),
+                Entry1 = "3",
+                Entry2 = null,
+                Entry3 = null,
+                Id = 1,
+                PeriodId = 1,
+                PupilId = 1,
+                Subject = Data.Subjects.Literature
+            }
+        }, ApiResponseFactory.EnvelopeTypeIEnumerable);
+    }
 }
