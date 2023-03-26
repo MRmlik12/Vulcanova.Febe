@@ -9,12 +9,7 @@ namespace Vulcanova.Febe.Controllers.UnitApi;
 public class ExamController : Controller
 {
     [HttpGet("byPupil")]
-    public ApiResponse<ExamPayload[]> GetExamsByPupil(
-        [FromQuery] int unitId,
-        [FromQuery] int pupilId,
-        [FromQuery] DateTime lastSyncDate,
-        [FromQuery] int pageSize,
-        [FromQuery] int lastId = int.MinValue)
+    public ApiResponse<ExamPayload[]> GetExamsByPupil([FromQuery] GetExamsByPupilQuery query)
     {
         return ApiResponseFactory.Ok(new[]
         {

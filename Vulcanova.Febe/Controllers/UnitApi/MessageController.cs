@@ -9,12 +9,7 @@ namespace Vulcanova.Febe.Controllers.UnitApi;
 public class MessageController : Controller
 {
     [HttpGet("byBox")]
-    public ApiResponse<MessagePayload[]> GetMessagesByBox(
-        [FromQuery] Guid box,
-        [FromQuery] MessageBoxFolder folder,
-        [FromQuery] DateTime lastSyncDate,
-        [FromQuery] int lastId = int.MinValue,
-        [FromQuery] int pageSize = 500)
+    public ApiResponse<MessagePayload[]> GetMessagesByBox([FromQuery] GetMessagesByMessageBoxQuery query)
     {
         return ApiResponseFactory.Ok(new []
         {

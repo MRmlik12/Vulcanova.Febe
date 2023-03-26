@@ -8,7 +8,7 @@ namespace Vulcanova.Febe.Controllers.UnitApi;
 public class AddressbookController : Controller
 {
     [HttpGet]
-    public ApiResponse<AddressBookEntry[]> GetAddressbook([FromQuery] Guid box)
+    public ApiResponse<AddressBookEntry[]> GetAddressbook([FromQuery] GetMessageBoxAddressBookQuery query)
     {
         return ApiResponseFactory.Ok(new[]
         {

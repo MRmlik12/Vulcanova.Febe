@@ -9,13 +9,7 @@ namespace Vulcanova.Febe.Controllers.UnitApi;
 public class GradeController
 {
     [HttpGet("byPupil")]
-    public ApiResponse<GradePayload[]> GetGradesByPupil(
-        [FromQuery] int unitId,
-        [FromQuery] int pupilId,
-        [FromQuery] int periodId,
-        [FromQuery] DateTime lastSyncDate,
-        [FromQuery] int pageSize,
-        [FromQuery] int lastId = int.MinValue)
+    public ApiResponse<GradePayload[]> GetGradesByPupil([FromQuery] GetGradesByPupilQuery query)
     {
         return ApiResponseFactory.Ok(new[]
         {
@@ -58,12 +52,7 @@ public class GradeController
     }
 
     [HttpGet("average/byPupil")]
-    public ApiResponse<AverageGradePayload[]> GetAverageGradesByPupil(
-        [FromQuery] int unitId,
-        [FromQuery] int pupilId,
-        [FromQuery] int periodId,
-        [FromQuery] int pageSize,
-        [FromQuery] int lastId = int.MinValue)
+    public ApiResponse<AverageGradePayload[]> GetAverageGradesByPupil([FromQuery] GetAverageGradesByPupilQuery query)
     {
         return ApiResponseFactory.Ok(new []
         {
@@ -80,13 +69,7 @@ public class GradeController
     }
 
     [HttpGet("behaviour/byPupil")]
-    public ApiResponse<GradePayload[]> GetBehaviourGradeByPupil(
-        [FromQuery] int unitId,
-        [FromQuery] int pupilId,
-        [FromQuery] int periodId,
-        [FromQuery] DateTime lastSyncDate,
-        [FromQuery] int pageSize,
-        [FromQuery] int lastId = int.MinValue)
+    public ApiResponse<GradePayload[]> GetBehaviourGradeByPupil([FromQuery] GetBehaviourGradesByPupilQuery query)
     {
         return ApiResponseFactory.Ok(Array.Empty<GradePayload>(),
             ApiResponseFactory.EnvelopeTypeIEnumerable);
@@ -94,11 +77,7 @@ public class GradeController
 
     [HttpGet("summary/byPupil")]
     public ApiResponse<GradesSummaryEntryPayload[]> GetGradesSummaryByPupil(
-        [FromQuery] int unitId,
-        [FromQuery] int pupilId,
-        [FromQuery] int periodId,
-        [FromQuery] int pageSize,
-        [FromQuery] int lastId = int.MinValue)
+        [FromQuery] GetGradesSummaryByPupilQuery query)
     {
         return ApiResponseFactory.Ok(new[]
         {

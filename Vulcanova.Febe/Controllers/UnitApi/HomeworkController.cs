@@ -9,12 +9,7 @@ namespace Vulcanova.Febe.Controllers.UnitApi;
 public class HomeworkController
 {
     [HttpGet("byPupil")]
-    public ApiResponse<HomeworkPayload[]> GetHomeworkByPupil(
-        [FromQuery] int pupilId,
-        [FromQuery] int periodId,
-        [FromQuery] DateTime lastSyncDate,
-        [FromQuery] int lastId = int.MinValue,
-        [FromQuery] int pageSize = 500)
+    public ApiResponse<HomeworkPayload[]> GetHomeworkByPupil([FromQuery] GetHomeworkByPupilQuery query)
     {
         return ApiResponseFactory.Ok(new[]
         {
