@@ -8,6 +8,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(o =>
 {
     o.DescribeAllParametersInCamelCase();
+    o.CustomSchemaIds(type => type.ToString());
 });
 
 var app = builder.Build();
