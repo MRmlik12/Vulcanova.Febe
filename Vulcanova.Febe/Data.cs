@@ -43,4 +43,15 @@ public static class Data
             Surname = "Łęcka"
         };
     }
+
+    public static class Common
+    {
+        public static readonly ClassUnit Class = new()
+        {
+            DisplayName = "4XD",
+            Id = 1,
+            Key = "0a3aaa7d-d697-4c43-82ed-cc10936aa448",
+            Symbol = "XD"
+        };
+    }
 }
