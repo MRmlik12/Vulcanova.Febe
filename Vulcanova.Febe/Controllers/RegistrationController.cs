@@ -20,7 +20,8 @@ public class RegistrationController : Controller
             }, "AccountPayload");
     }
 
-    [HttpPost("hebe")]
+    [HttpGet("hebe")]
+    [HttpGet("/febe/05LO/api/mobile/register/hebe")]
     public ApiResponse<AccountPayload[]> RegisterHebe()
     {
         return ApiResponseFactory.Ok(
@@ -176,7 +177,7 @@ public class RegistrationController : Controller
                         Id = 1,
                         Name = "V Liceum Ogólnokształcące",
                         Patron = "Aplikacja Vulcanova",
-                        RestUrl = new Uri($"https://{Request.Host}/febe/"),
+                        RestUrl = new Uri($"https://{Request.Host}/febe/05LO/api"),
                         SchoolTopic = Guid.NewGuid(),
                         Short = "05LO",
                         Symbol = "05LO"
