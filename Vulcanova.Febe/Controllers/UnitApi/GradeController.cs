@@ -39,7 +39,7 @@ public class GradeController
                 ContentRaw = "6",
                 Creator = Data.Teachers.Literature,
                 DateCreated = DateTimeInfo.FromDateTime(new DateTime(2021, 9, 7)),
-                DateModify = null,
+                DateModify = DateTimeInfo.FromDateTime(new DateTime(2021, 9, 7)),
                 Denominator = null,
                 Id = 1,
                 Key = Guid.Parse("5141cbef-d5da-42a1-a7e4-a116e299c878"),
