@@ -4,7 +4,7 @@ using Vulcanova.Uonet.Api.LuckyNumber;
 
 namespace Vulcanova.Febe.Controllers.UnitApi;
 
-[Route("febe/05LO/api/mobile/lucky")]
+[Route("febe/05LO/api/mobile/school/lucky")]
 public class LuckyNumberController
 {
     [HttpGet]
