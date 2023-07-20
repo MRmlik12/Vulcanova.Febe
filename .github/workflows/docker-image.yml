@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository and submodules
-      uses: actions/checkout@v3
-      with: 
-        submodules: recursive
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v3
+        with: 
+          submodules: recursive
 
-    - name: Build the Docker image
-      run: docker build . --file Vulcanova.Febe/Dockerfile --tag febe
+      - name: Build the Docker image
+        run: docker build . --file Vulcanova.Febe/Dockerfile --tag febe
