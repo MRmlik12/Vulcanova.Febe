@@ -13,10 +13,10 @@ public class ScheduleController
     public ApiResponse<ScheduleEntryPayload[]> GetScheduleEntriesByPupil(
         [FromQuery] GetScheduleEntriesByPupilQuery query)
     {
-        var dt = new DateTime(2021, 9, 7);
+        var dt = new DateTime(2023, 9, 16, 1,1,1);
 
         return ApiResponseFactory.Ok(
-            Enumerable.Range(1, 14).Select(p => new ScheduleEntryPayload
+            Enumerable.Range(0, 700).SelectMany(p => Enumerable.Range(0, 7).Select(q => new ScheduleEntryPayload
             {
                 Change = null,
                 Clazz = new ClassUnit
@@ -29,7 +29,7 @@ public class ScheduleController
                 Date = DateTimeInfo.FromDateTime(dt.AddDays(p)),
                 Distribution = null,
                 Event = null,
-                Id = p,
+                Id = p*10 + q,
                 MergeChangeId = null,
                 PupilAlias = null,
                 Room = new Room
@@ -40,15 +40,8 @@ public class ScheduleController
                 Subject = Data.Subjects.It,
                 TeacherPrimary = Data.Teachers.Tutor,
                 TeacherSecondary = null,
-                TimeSlot = new TimeSlot
-                {
-                    Display = "11:35-12:20",
-                    End = "12:20",
-                    Id = 1,
-                    Position = 5,
-                    Start = "11:35"
-                },
+                TimeSlot = Data.Common.GetTimeSlot(q),
                 Visible = true
-            }).ToArray(), ApiResponseFactory.EnvelopeTypeIEnumerable);
+            })).ToArray(), ApiResponseFactory.EnvelopeTypeIEnumerable);
     }
 }

@@ -53,5 +53,22 @@ public static class Data
             Key = "0a3aaa7d-d697-4c43-82ed-cc10936aa448",
             Symbol = "XD"
         };
+
+        public static TimeSlot GetTimeSlot(int lessonNo)
+        {
+            var start = TimeOnly.Parse("14:30");
+            start = start.AddMinutes((5 + 45) * lessonNo);
+
+            var end = start.AddMinutes(45);
+
+            return new TimeSlot
+            {
+                Display = $"{start:HH:mm}-{end:HH:mm}",
+                End = end.ToString("HH:mm"),
+                Id = lessonNo,
+                Position = lessonNo,
+                Start = start.ToString("HH:mm")
+            };
+        }
     }
 }

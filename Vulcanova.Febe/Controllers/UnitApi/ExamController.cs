@@ -17,9 +17,9 @@ public class ExamController : Controller
             {
                 Content = "Pętle w COBOLu",
                 Creator = Data.Teachers.Tutor,
-                DateCreated = DateTimeInfo.FromDateTime(new DateTime(2021, 9, 3)),
-                DateModify = DateTimeInfo.FromDateTime(new DateTime(2021, 9, 3)),
-                Deadline = DateTimeInfo.FromDateTime(new DateTime(2021, 10, 3)),
+                DateCreated = DateTimeInfo.FromDateTime(new DateTime(2023, 7, 20, 1,1,1)),
+                DateModify = DateTimeInfo.FromDateTime(new DateTime(2023, 7, 20, 1,1,1)),
+                Deadline = DateTimeInfo.FromDateTime(new DateTime(2023, 7, 20, 1,1,1)),
                 Id = 1,
                 Key = "c28e65d7-92fa-43eb-9b11-da3ba3333eb7",
                 PupilId = 1,

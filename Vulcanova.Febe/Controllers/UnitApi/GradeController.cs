@@ -62,7 +62,7 @@ public class GradeController
                 PeriodId = 1,
                 PupilId = 1,
                 Subject = Data.Subjects.Literature,
-                Average = "6",
+                Average = "3,33",
                 Points = null
             }
         }, ApiResponseFactory.EnvelopeTypeIEnumerable);

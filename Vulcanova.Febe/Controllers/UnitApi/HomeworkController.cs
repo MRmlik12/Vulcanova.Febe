@@ -16,13 +16,13 @@ public class HomeworkController
             new HomeworkPayload
             {
                 AnswerDate = null,
-                AnswerDeadline = DateTimeInfo.FromDateTime(new DateTime(2021, 9, 11)),
+                AnswerDeadline = DateTimeInfo.FromDateTime(new DateTime(2023, 7, 9, 1,1,1)),
                 Attachments = new List<object>(),
                 Content = "Lalka — rozprawka",
                 Creator = Data.Teachers.Literature,
-                Date = DateTimeInfo.FromDateTime(new DateTime(2021, 9, 11)),
-                DateCreated = DateTimeInfo.FromDateTime(new DateTime(2021, 9, 9)),
-                Deadline = DateTimeInfo.FromDateTime(new DateTime(2021, 9, 11)),
+                Date = DateTimeInfo.FromDateTime(new DateTime(2023, 7, 9, 1,1,1)),
+                DateCreated = DateTimeInfo.FromDateTime(new DateTime(2023, 7, 9, 1,1,1)),
+                Deadline = DateTimeInfo.FromDateTime(new DateTime(2023, 7, 9, 1,1,1)),
                 Id = 1,
                 IdHomework = 1,
                 IdPupil = 1,

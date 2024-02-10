@@ -30,9 +30,10 @@ public class RegistrationController : Controller
                 new AccountPayload
                 {
                     Capabilities = new [] {
-                        "ADDRESS_BOOK_PUPIL",
-                        "MEETINGS",
-                        "REGULAR"
+                        AccountCapabilities.AddressBookPupil,
+                        AccountCapabilities.Meetings,
+                        AccountCapabilities.Regular,
+                        AccountCapabilities.GradesAverageEnabled
                     },
                     ClassDisplay = "4XD",
                     ConstituentUnit = new ConstituentUnit
@@ -105,6 +106,44 @@ public class RegistrationController : Controller
                     Partition = "febe-05LO",
                     Periods = new []
                     {
+                        new Period 
+                        {
+                            Capabilities = Array.Empty<object>(),
+                            Current = true,
+                            End = new YearEnd 
+                            {
+                                DateDisplay = "23.01.2022",
+                                Timestamp = 1642892400000
+                            },
+                            Id = 1,
+                            Last = false,
+                            Level = 4,
+                            Number = 1,
+                            Start = new YearEnd 
+                            {
+                                DateDisplay = "01.09.2021",
+                                Timestamp = 1630447200000
+                            }
+                        },
+                        new Period 
+                        {
+                            Capabilities = Array.Empty<object>(),
+                            Current = false,
+                            End = new YearEnd 
+                            {
+                                DateDisplay = "31.08.2022",
+                                Timestamp = 1661896800000
+                            },
+                            Id = 2,
+                            Last = true,
+                            Level = 4,
+                            Number = 2,
+                            Start = new YearEnd 
+                            {
+                                DateDisplay = "24.01.2022",
+                                Timestamp = 1642978800000
+                            }
+                        },
                         new Period 
                         {
                             Capabilities = Array.Empty<object>(),
