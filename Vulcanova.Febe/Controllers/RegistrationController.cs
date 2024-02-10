@@ -91,7 +91,8 @@ public class RegistrationController : Controller
                         {
                             DateDisplay = "2021-09-01",
                             Timestamp = 1630447200000
-                        }
+                        },
+                        PupilNumber = 33
                     },
                     Login = new Login
                     {
