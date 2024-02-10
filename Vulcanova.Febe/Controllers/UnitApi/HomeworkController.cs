@@ -16,13 +16,14 @@ public class HomeworkController
             new HomeworkPayload
             {
                 AnswerDate = null,
-                AnswerDeadline = DateTimeInfo.FromDateTime(new DateTime(2023, 7, 9, 1,1,1)),
-                Attachments = new List<object>(),
+                AnswerDeadline = DateTimeInfo.FromDateTime(new DateTime(2023, 7, 9, 1, 1, 1)),
+                Attachments = new List<Attachment>
+                    { new() { Link = "https://vulcanova.github.io/", Name = "Materiały.pdf" } },
                 Content = "Lalka — rozprawka",
                 Creator = Data.Teachers.Literature,
-                Date = DateTimeInfo.FromDateTime(new DateTime(2023, 7, 9, 1,1,1)),
-                DateCreated = DateTimeInfo.FromDateTime(new DateTime(2023, 7, 9, 1,1,1)),
-                Deadline = DateTimeInfo.FromDateTime(new DateTime(2023, 7, 9, 1,1,1)),
+                Date = DateTimeInfo.FromDateTime(new DateTime(2023, 7, 9, 1, 1, 1)),
+                DateCreated = DateTimeInfo.FromDateTime(new DateTime(2023, 7, 9, 1, 1, 1)),
+                Deadline = DateTimeInfo.FromDateTime(new DateTime(2023, 7, 9, 1, 1, 1)),
                 Id = 1,
                 IdHomework = 1,
                 IdPupil = 1,
